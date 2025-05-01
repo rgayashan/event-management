@@ -7,7 +7,6 @@ import ErrorMessage from '../components/common/ErrorMessage';
 import { useFilters } from '../hooks/useFilters';
 import { format } from 'date-fns';
 
-// Imported components
 import HeroSection from '../components/dashboard/HeroSection';
 import UpcomingEventsHeader from '../components/dashboard/UpcomingEventsHeader';
 import EmptyEventsList from '../components/dashboard/EmptyEventsList';

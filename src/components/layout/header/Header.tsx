@@ -19,8 +19,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { NavigationItems } from './NavigationItems';
 import { MobileMenu } from './MobileMenu';
-import { headerStyles } from './styles/HeaderStyles';
-import logo from '../../assets/images/logo.png';
+import { headerStyles } from './HeaderStyles';
+import logo from '../../../assets/images/logo.png';
 import { Zoom } from '@mui/material';
 
 const Header: React.FC = () => {

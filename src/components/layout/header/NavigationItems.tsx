@@ -3,7 +3,7 @@ import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { Button, Box, Zoom } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import { headerStyles } from './styles/HeaderStyles';
+import { headerStyles } from './HeaderStyles';
 
 export const navigationConfig = [
   { text: 'Dashboard', path: '/', icon: <CalendarMonthIcon fontSize="small" /> }

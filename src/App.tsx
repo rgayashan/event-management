@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { store } from './redux/store';
 import AppRoutes from './routes';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
+import Header from './components/layout/header/Header';
+import Footer from './components/layout/footer/Footer';
 
 // Create a theme instance
 const theme = createTheme({

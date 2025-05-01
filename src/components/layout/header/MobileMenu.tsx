@@ -12,7 +12,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { navigationConfig } from './NavigationItems';
-import { headerStyles } from './styles/HeaderStyles';
+import { headerStyles } from './HeaderStyles';
 
 interface MobileMenuProps {
   mounted: boolean;
