@@ -60,7 +60,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
         <CardMedia
           sx={{
             height: 120,
-            background: gradientBg,
+            background: 'linear-gradient(to bottom,lightblue,darkblue, lightblue)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
