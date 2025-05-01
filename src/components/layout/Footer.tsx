@@ -152,7 +152,7 @@ const Footer: React.FC = () => {
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                     <EmailIcon fontSize="small" sx={{ mr: 1, color: 'text.secondary' }} />
                     <Typography variant="body2" color="text.secondary">
-                      support@eventmanager.com
+                      contact.gayashan@gmail.com
                     </Typography>
                   </Box>
                   <Box 
@@ -166,7 +166,7 @@ const Footer: React.FC = () => {
                     }}
                   >
                     <Typography variant="body2" color="text.secondary">
-                      Subscribe to our newsletter for updates on new features and upcoming events.
+                    Senior Software Engineer Position at Softvil Technologies assignmanet
                     </Typography>
                   </Box>
                 </Box>

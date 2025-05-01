@@ -36,30 +36,6 @@ const UpcomingEventsHeader: React.FC<UpcomingEventsHeaderProps> = ({
             <Typography variant="h5" component="h2" sx={{ fontWeight: 'medium', display: 'flex', alignItems: 'center' }}>
               <EventIcon sx={{ mr: 1 }} /> Upcoming Events
             </Typography>
-            
-            <Box sx={{ border: '1px solid rgba(0,0,0,0.1)', borderRadius: 2, overflow: 'hidden' }}>
-              <Tabs 
-                value={view} 
-                onChange={(_, newValue) => onViewChange(newValue)}
-                variant="fullWidth"
-                indicatorColor="secondary"
-              >
-                <Tab 
-                  value="list" 
-                  icon={<ViewListIcon />} 
-                  iconPosition="start"
-                  label="List"
-                  sx={{ minWidth: '110px' }}
-                />
-                <Tab 
-                  value="calendar" 
-                  icon={<CalendarMonthIcon />} 
-                  iconPosition="start"
-                  label="Calendar"
-                  sx={{ minWidth: '110px' }}
-                />
-              </Tabs>
-            </Box>
           </Box>
           <Divider sx={{ my: 2 }} />
           
