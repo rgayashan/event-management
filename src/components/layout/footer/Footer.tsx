@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                 © {new Date().getFullYear()} Event Manager - All rights reserved
               </Typography>
               <Typography variant="body2" color="text.secondary" align="center">
-                Made with ❤️ for event lovers
+                This project create for Softvil Interview
               </Typography>
             </Box>
           </Fade>

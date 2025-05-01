@@ -152,6 +152,73 @@ event-management-app/
 - Consistent error handling and feedback
 - Loading states and skeletons
 
+### Splash Screen Implementation
+The application includes a modern, animated splash screen that provides visual feedback during initial loading and route transitions:
+
+```typescript
+// Components Structure
+src/
+├── components/
+│   └── common/
+│       └── SplashScreen.tsx    # Splash screen component
+└── hooks/
+    └── useSplashScreen.ts      # Custom hook for splash screen logic
+```
+
+#### Features
+- Smooth fade-in and scale animations
+- Configurable minimum display time
+- Fallback for route transitions
+- Responsive design
+- Material-UI integration
+- Custom branding support
+
+#### Implementation Details
+1. **Animation Effects**
+   ```typescript
+   const fadeIn = keyframes`
+     from { opacity: 0; }
+     to { opacity: 1; }
+   `;
+   
+   const scaleIn = keyframes`
+     from { transform: scale(0.8); }
+     to { transform: scale(1); }
+   `;
+   ```
+
+2. **Custom Hook Usage**
+   ```typescript
+   const isLoading = useSplashScreen(2000); // 2 seconds minimum display
+   ```
+
+3. **Route Transition Support**
+   ```typescript
+   <Suspense fallback={<SplashScreen />}>
+     {/* Route components */}
+   </Suspense>
+   ```
+
+#### Customization Options
+1. **Branding**
+   - Replace default text with custom logo
+   - Modify color scheme
+   - Adjust typography
+
+2. **Timing**
+   - Configure minimum display duration
+   - Customize animation speeds
+
+3. **Styling**
+   - Modify animations
+   - Change layout and positioning
+   - Update loading indicators
+
+4. **Content**
+   - Add progress indicators
+   - Include brand messaging
+   - Display loading status
+
 ## 🔍 Evaluation Focus Areas
 
 1. **Code Quality**
