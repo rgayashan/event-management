@@ -6,7 +6,8 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { headerStyles } from './HeaderStyles';
 
 export const navigationConfig = [
-  { text: 'Dashboard', path: '/', icon: <CalendarMonthIcon fontSize="small" /> }
+  { text: 'Dashboard', path: '/', icon: <CalendarMonthIcon fontSize="small" /> },
+  { text: 'Profile', path: '/profile', icon: <PersonIcon fontSize="small" /> }
 ];
 
 interface NavigationItemsProps {
