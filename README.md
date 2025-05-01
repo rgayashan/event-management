@@ -35,7 +35,7 @@ This is a single-page application (SPA) that allows users to manage and particip
 ## 📋 Technical Requirements & Best Practices
 
 ### Component Structure
-- Maximum component file size: 250 lines
+- Maximum component file size: 200 lines
 - Single Responsibility Principle: Each component should do one thing well
 - Custom hooks for reusable logic
 - Proper component composition and prop drilling avoidance

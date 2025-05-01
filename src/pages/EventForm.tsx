@@ -9,7 +9,12 @@ import {
   Tooltip,
   Fade,
   Zoom,
-  Alert
+  Alert,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  DialogContentText
 } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { fetchEventById, createEvent, updateEvent } from '../redux/slices/eventsSlice';
@@ -30,6 +35,7 @@ const EventForm: React.FC = () => {
   const isEditMode = Boolean(id);
   const [animationLoaded, setAnimationLoaded] = useState(false);
   const [submitAttempted, setSubmitAttempted] = useState(false);
+  const [openConfirmDialog, setOpenConfirmDialog] = useState(false);
 
   const { formData, errors, handleChange, validateForm } = useEventForm(
     isEditMode && currentEvent ? currentEvent : undefined
@@ -49,6 +55,12 @@ const EventForm: React.FC = () => {
 
     if (!validateForm()) return;
 
+    setOpenConfirmDialog(true);
+  };
+
+  const handleConfirmSubmit = async () => {
+    setOpenConfirmDialog(false);
+    
     try {
       if (isEditMode && id) {
         await dispatch(updateEvent({ id, eventData: formData })).unwrap();
@@ -77,6 +89,41 @@ const EventForm: React.FC = () => {
           animationLoaded={animationLoaded}
           onCancel={handleCancel}
         />
+
+        <Dialog
+          open={openConfirmDialog}
+          onClose={() => setOpenConfirmDialog(false)}
+          aria-labelledby="confirm-dialog-title"
+          aria-describedby="confirm-dialog-description"
+        >
+          <DialogTitle id="confirm-dialog-title">
+            {isEditMode ? "Confirm Update" : "Confirm Creation"}
+          </DialogTitle>
+          <DialogContent>
+            <DialogContentText id="confirm-dialog-description">
+              {isEditMode
+                ? "Are you sure you want to update this event?"
+                : "Are you sure you want to create this event?"}
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={() => setOpenConfirmDialog(false)}
+              color="primary"
+              variant="outlined"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={handleConfirmSubmit}
+              color="primary"
+              variant="contained"
+              autoFocus
+            >
+              {isEditMode ? "Update" : "Create"}
+            </Button>
+          </DialogActions>
+        </Dialog>
 
         <Zoom in={animationLoaded} timeout={800}>
           <Paper
