@@ -27,8 +27,8 @@ const SplashScreen: React.FC = () => {
         position: 'fixed',
         top: 0,
         left: 0,
-        right: 0,
-        bottom: 0,
+        width: '100vw',
+        height: '100vh',
         bgcolor: 'background.paper',
         display: 'flex',
         flexDirection: 'column',
@@ -36,6 +36,7 @@ const SplashScreen: React.FC = () => {
         justifyContent: 'center',
         zIndex: 9999,
         animation: `${fadeIn} 0.5s ease-in-out`,
+        padding: { xs: 2, sm: 3 },
       }}
     >
       <Box
@@ -44,6 +45,9 @@ const SplashScreen: React.FC = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          maxWidth: '100%',
           gap: 2,
         }}
       >
@@ -55,6 +59,7 @@ const SplashScreen: React.FC = () => {
             fontWeight: 'bold',
             color: 'primary.main',
             mb: 2,
+            fontSize: { xs: '2rem', sm: '3rem', md: '3.75rem' },
           }}
         >
           Event Manager
