@@ -82,8 +82,8 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd event-management-app
+   git clone https://github.com/rgayashan/event-management.git
+   cd event-management
    ```
 
 2. **Install dependencies**
