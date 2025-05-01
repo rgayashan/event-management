@@ -23,7 +23,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { keyframes } from '@mui/system';
-
+import logo from '../../assets/images/logo.png';
 const pulse = keyframes`
   0% {
     box-shadow: 0 0 0 0 rgba(25, 118, 210, 0.4);
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
                     }
                   }}
                 >
-                  <CalendarMonthIcon fontSize="small" />
+                  <img src={logo} alt="Event Manager" style={{ width: '100%', height: '100%' }} />
                 </Box>
                 <Typography
                   variant="h6"

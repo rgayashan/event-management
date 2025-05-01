@@ -384,26 +384,6 @@ const EventDetail: React.FC = () => {
                 </Box>
                 <Divider sx={{ my: 2 }} />
                 <AttendeeList attendees={currentEvent.attendees} />
-                
-                <Button 
-                  variant="contained" 
-                  fullWidth 
-                  sx={{ 
-                    mt: 3,
-                    py: 1,
-                    borderRadius: 2,
-                    background: `linear-gradient(45deg, ${titleColor}, ${complementaryColor})`,
-                    backgroundSize: '200% 200%',
-                    animation: `${gradientAnimation} 15s ease infinite`,
-                    transition: 'all 0.3s ease',
-                    '&:hover': {
-                      transform: 'translateY(-2px)',
-                      boxShadow: 4
-                    }
-                  }}
-                >
-                  Join Event
-                </Button>
               </Paper>
             </Grow>
           </Box>
